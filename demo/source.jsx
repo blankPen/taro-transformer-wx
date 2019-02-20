@@ -1,8 +1,3 @@
-const fs = require('fs');
-const transform = require('./index');
-
-
-const baseCode = `
 import { Provider } from '@tarojs/mobx'
 import Taro, { Component } from '@tarojs/taro'
 import { View, Button } from '@tarojs/components'
@@ -12,12 +7,12 @@ const myStore = {};
 export default class Index extends Component {
 
     constructor(props) {
-      super(props);
-      this.func = () => {};
-      this.func2 = this.func.bind(this);
-      this.state = {
-          list: []
-      }
+        super(props);
+        this.func = () => { };
+        this.func2 = this.func.bind(this);
+        this.state = {
+            list: []
+        }
     }
 
     state = {
@@ -25,9 +20,9 @@ export default class Index extends Component {
     }
 
     config = {
-      usingComponents: {
-        'ec-canvas': '../../components/ec-canvas/ec-canvas'
-      }
+        usingComponents: {
+            'ec-canvas': '../../components/ec-canvas/ec-canvas'
+        }
     }
 
     componentDidUpdate(props) {
@@ -37,14 +32,14 @@ export default class Index extends Component {
         console.log('', p.arg6)
     }
 
-    shouldComponentUpdate({ arg2 , arg3 }) {
-        console.log('', arg2 , arg3);
+    shouldComponentUpdate({ arg2, arg3 }) {
+        console.log('', arg2, arg3);
     }
 
-    saveRef=(ref)=> this.dom = ref;
+    saveRef = (ref) => this.dom = ref;
 
     add = async () => {
-        const a = \`hahaha${this}${3}${true}\`;
+        const a = `hahaha${this}${3}${true}`;
         const list = [...this.state.list];
         list.add({});
         this.setState({ list });
@@ -164,20 +159,3 @@ export default class Index extends Component {
     )
   }
 }
-`
-
-const res = transform({
-    isRoot: false,
-    isApp: false,
-    sourcePath: __dirname,
-    outputPath: __dirname,
-    isTyped: false,
-
-    code: baseCode
-})
-
-// console.log(res);
-
-
-fs.writeFileSync('./res/code.js', res.code);
-fs.writeFileSync('./res/template.wxml', res.template);

@@ -1,0 +1,89 @@
+<block>
+    <block wx:if="{{anonymousState__temp}}">
+        <view></view>
+    </block>
+    <view wx:else>{{anonymousState__temp2}}
+        <block wx:if="{{anonymousState__temp5}}">
+            <view-2 __triggerObserer="{{ _triggerObserer }}"></view-2>
+        </block>
+        <block>
+            <block wx:if="{{anonymousState__temp6}}">{{anonymousState__temp7}}</block>
+            <block wx:else>
+                <view></view>
+            </block>
+        </block>
+        <block wx:if="{{test}}">
+            <view></view>
+        </block>
+        <block>
+            <block wx:if="{{test}}">
+                <view></view>
+            </block>
+            <block wx:else>{{'string'}}</block>
+        </block>
+        <block wx:if="{{!test}}">
+            <view></view>
+        </block>
+        <block>
+            <block wx:if="{{test}}">{{'string'}}</block>
+            <block wx:else>
+                <view></view>
+            </block>
+        </block>
+        <block>
+            <block wx:if="{{test}}">
+                <view></view>
+            </block>
+            <block wx:else>
+                <view-2 __triggerObserer="{{ _triggerObserer }}"></view-2>
+            </block>
+        </block>
+        <block>
+            <block wx:if="{{test}}">
+                <view></view>
+            </block>
+            <block wx:else>{{anonymousState__temp8}}</block>
+        </block>
+        <block>
+            <block wx:if="{{test}}">{{anonymousState__temp9}}</block>
+            <block wx:else>
+                <view></view>
+            </block>
+        </block>
+        <block>
+            <block wx:if="{{test}}">
+                <view></view>
+            </block>
+            <block wx:else>{{pAdd}}</block>
+        </block>
+        <block>
+            <block wx:if="{{test}}">
+                <view></view>
+            </block>
+            <block wx:else>{{test ? 1 : 2}}</block>
+        </block>
+        <view></view>
+        <view class="index" id="hWxBB">
+            <slot></slot>{{children}}{{children}}
+            <slot name="abc"></slot>{{renderA}}
+            <custom __triggerObserer="{{ _triggerObserer }}"></custom>
+            <view class="title" attr="{{_params}}" id="eKGHN">title</view>
+            <view class="content" style="{{anonymousState__temp3}}" id="oScHS">
+                <view class="item" id="{{'YDynJ' + index}}" wx:for="{{loopArray0}}" wx:for-item="item" wx:for-index="index">
+                    <view>{{item.$original}}</view>
+                    <button class="del" bindtap="remove" data-e-tap-so="this" data-e-tap-a-a="{{item.$original.id}}" data-e-tap-a-b="{{item.$original.id2}}" data-e-tap-a-c="{{item.$original.id3}}">删除</button>
+                </view>
+                <view wx:key="index" class="item" wx:for="{{list}}" wx:for-item="item2">
+                    <view>{{item2}}</view>
+                </view>
+                <view wx:key="anonymousState__temp4">{{value}}</view>
+                <view class="add">{{value}}</view>
+                <button bindclick-1="add" data-e-click1-so="this" data-e-click1-a-a="{{123}}" data-e-click1-a-b="{{hca}}">添加</button>
+                <button class="{{add3}}" bindclick-2="funPrivateJYMag">添加</button>
+                <button class="add" bindclick-3="add234">添加</button>
+                <button class="add" bindclick-4="add">添加</button>
+                <button class="add" bindclick-5="funPrivateMrCXy">添加</button>
+            </view>
+        </view>
+    </view>
+</block>
